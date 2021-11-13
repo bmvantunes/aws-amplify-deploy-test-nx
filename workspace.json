@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "next-app-amplify-nx": "apps/next-app-amplify-nx",
+    "next-app-amplify-nx-e2e": "apps/next-app-amplify-nx-e2e"
+  }
+}

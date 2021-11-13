@@ -1,0 +1,28 @@
+{
+  "root": "apps/next-app-amplify-nx-e2e",
+  "sourceRoot": "apps/next-app-amplify-nx-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/next-app-amplify-nx-e2e/cypress.json",
+        "devServerTarget": "next-app-amplify-nx:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "next-app-amplify-nx:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/next-app-amplify-nx-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["next-app-amplify-nx"]
+}
