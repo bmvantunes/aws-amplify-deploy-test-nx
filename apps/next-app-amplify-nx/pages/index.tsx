@@ -14,7 +14,7 @@ export function Index(nx: unknown) {
    */
   return (
     <StyledPage>
-     Hello x23 {JSON.stringify({nx})}
+     Hello x23x {JSON.stringify({nx})}
     </StyledPage>
   );
 }
