@@ -1,6 +1,4 @@
 {
-  "name": "lol",
-  "private": true,
   "dependencies": {
     "next": "*"
   },
