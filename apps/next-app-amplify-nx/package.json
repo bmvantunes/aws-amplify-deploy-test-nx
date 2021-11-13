@@ -1,4 +1,9 @@
 {
+  "name": "lol",
+  "private": true,
+  "dependencies": {
+    "next": "*"
+  },
   "scripts": {
     "build": "next build",
     "start": "next start"
