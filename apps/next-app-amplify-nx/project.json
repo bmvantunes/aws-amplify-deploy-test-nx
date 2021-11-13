@@ -9,7 +9,7 @@
       "defaultConfiguration": "production",
       "options": {
         "root": "apps/next-app-amplify-nx",
-        "outputPath": "dist/apps/next-app-amplify-nx"
+        "outputPath": "apps/next-app-amplify-nx/dist"
       },
       "configurations": {
         "production": {}
