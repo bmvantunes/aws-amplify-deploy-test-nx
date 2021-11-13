@@ -6,7 +6,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to next-app-amplify-nx!</title>
+        <title>BRUNO</title>
       </Head>
       <div className="app">
         <header className="flex">
