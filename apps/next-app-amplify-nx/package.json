@@ -10,7 +10,7 @@
     "@emotion/react": "11.5.0"
   },
   "devDependencies": {
-    "@testing-library/react": "12.1.2"
+    "@testing-library/react": "^12.1.2"
   },
   "scripts": {
     "dev": "next dev",
