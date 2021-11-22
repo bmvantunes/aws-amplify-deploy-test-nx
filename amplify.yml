@@ -1,0 +1,22 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd .. && cd ..
+            - npm install
+        build:
+          commands:
+            - npx nx build next-app-amplify-nx
+            - mv node_modules apps/next-app-amplify-nx/node_modules
+            - cd apps/next-app-amplify-nx
+            - mv dist/.next .next
+      artifacts:
+        baseDirectory: .next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+    appRoot: apps/next-app-amplify-nx
