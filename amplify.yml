@@ -4,10 +4,12 @@ applications:
       phases:
         preBuild:
           commands:
+            - node -e "console.log('aaaaaaaaaaa', new Date())"
             - cd .. && cd ..
             - npm install
         build:
           commands:
+            - node -e "console.log('aaaaaaaaaaa', new Date())"
             - npx nx build next-app-amplify-nx
             - mv node_modules apps/next-app-amplify-nx/node_modules
             - cd apps/next-app-amplify-nx
