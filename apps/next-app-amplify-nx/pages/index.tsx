@@ -2,8 +2,7 @@ import styled from '@emotion/styled';
 import { GetServerSideProps } from 'next';
 
 const StyledPage = styled.div`
-  .page {
-  }
+  color: red;
 `;
 
 export function Index(nx: unknown) {
