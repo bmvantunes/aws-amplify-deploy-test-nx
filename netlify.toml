@@ -1,0 +1,6 @@
+[build]
+  command = "npx nx build next-app-amplify-nx"
+  publish = "apps/next-app-amplify-nx/dist"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

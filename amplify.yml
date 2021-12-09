@@ -2,20 +2,25 @@ version: 1
 applications:
   - frontend:
       phases:
-        preBuild:
-          commands:
-            - node -e "console.log('aaaaaaaaaaa', new Date())"
-            - cd .. && cd ..
-            - npm install
         build:
           commands:
-            - node -e "console.log('aaaaaaaaaaa', new Date())"
-            - npx nx build next-app-amplify-nx
+            - cd .. && cd ..
+            - npm install
+            - npx nx build next-app-amplify-nx --prod --skip-nx-cache
             - mv node_modules apps/next-app-amplify-nx/node_modules
+            - npm install
+            - mv node_modules libs/my-ui-library
             - cd apps/next-app-amplify-nx
-            - mv dist/.next .next
+            # - cp package.json apps/next-app-amplify-nx
+            # - cp package.json libs/my-ui-library
+            # - cd libs/my-ui-library && npx json -I -f package.json -e "this.name='@my-company-name/my-ui-library'" && npm install
+            # - cd ../../apps/next-app-amplify-nx
+
+            # - npx json -I -f package.json -e "this.scripts.start='next start'" && npx json -I -f package.json -e "this.scripts.build='next build'"
+            # - npm install
+            # - npm run build
       artifacts:
-        baseDirectory: .next
+        baseDirectory: dist
         files:
           - '**/*'
       cache:

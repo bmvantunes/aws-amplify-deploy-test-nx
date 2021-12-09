@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "my-ui-library": "libs/my-ui-library",
     "next-app-amplify-nx": "apps/next-app-amplify-nx",
     "next-app-amplify-nx-e2e": "apps/next-app-amplify-nx-e2e"
   }
